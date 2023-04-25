@@ -18,7 +18,9 @@ const app = express();
 //middleware
 app.use(express.json());
 app.use(cors());
-
+app.get("/", (req, res)=>{
+    res.send("Hello i'm working fine")
+ })
 //routes
 app.use("/api/signup", signUpRouter);
 app.use("/api/login", loginRouter); 
